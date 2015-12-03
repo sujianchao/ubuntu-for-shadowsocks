@@ -5,7 +5,7 @@
 FROM ubuntu:14.04
 MAINTAINER Su Jianchao <sujianchao@gmail.com>
 
-ENV REFRESHED_AT 2015-06-05
+ENV REFRESHED_AT 2015-12-03
 
 RUN apt-get -qq update && \
     apt-get install -q -y wget build-essential python-pip python-m2crypto && \
