@@ -14,7 +14,7 @@ RUN apt-get -qq update && \
 RUN pip install shadowsocks
 
 ENV SS_SERVER_ADDR 0.0.0.0
-ENV SS_SERVER_PORT 20000
+ENV SS_SERVER_PORT 20150
 ENV SS_PASSWORD sujianchao
 #ENV SS_METHOD chacha20
 ENV SS_METHOD aes-256-cfb
