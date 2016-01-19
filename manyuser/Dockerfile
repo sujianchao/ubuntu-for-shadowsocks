@@ -31,8 +31,9 @@ ENV USERNAME        ssuser
 ENV PASSWORD        yourDBPassword
 ENV DATABASE        shadowsocks
 ENV SS_SERVER_PORT  50000-50009
+
 #部署shadowsocks多用户版
-RUN git clone -b manyuser https://github.com/sujianchao/shadowsocks.git /app
+RUN mkdir /app && git clone -b manyuser https://github.com/sujianchao/shadowsocks.git /app
 
 ADD set_root_pw.sh /set_root_pw.sh
 ADD run.sh /run.sh
