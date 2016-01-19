@@ -30,4 +30,5 @@ if [ ! -f /.root_pw_set ]; then
 fi
 
 /usr/sbin/sshd -D
-exec /app/shadowsocks/server.py
+cd /app/shadowsocks
+exec /usr/bin/python server.py
