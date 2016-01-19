@@ -7,3 +7,4 @@
 	ENV DATABASE        shadowsocks
 #开启ssh登录
 	ENV AUTHORIZED_KEYS yes
+#默认加密方式rc4-md5暂不支持修改
