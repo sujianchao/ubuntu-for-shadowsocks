@@ -5,6 +5,8 @@ sed -i "s/localhost/$HOSTNAME/"                 /app/shadowsocks/Config.py
 sed -i "s/ssuser/$USERNAME/"                    /app/shadowsocks/Config.py
 sed -i "s/yourDBPassword/$PASSWORD/"            /app/shadowsocks/Config.py
 sed -i "s/shadowsocks/$DATABASE/"               /app/shadowsocks/Config.py 
+#添加server.py的执行路径/app/shadowsocks
+sed -i "s%##sed add##%import os \\nos.chdir(\"/app/shadowsocks\")%"   /app/shadowsocks/server.py
 
 if [ "${AUTHORIZED_KEYS}" != "**None**" ]; then
     echo "=> Found authorized keys"
@@ -30,5 +32,5 @@ if [ ! -f /.root_pw_set ]; then
 fi
 
 /usr/sbin/sshd -D
-cd /app/shadowsocks
-exec /usr/bin/python server.py
+
+exec python /app/shadowsocks/server.py
