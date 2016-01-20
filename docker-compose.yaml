@@ -1,0 +1,8 @@
+mss:
+	image: index.alauda.cn/itjfwcn/manyuser-shadowsocks
+	environment:
+		HOSTNAME: localhost
+		USERNAME: ssuser
+		PASSWORD: yourDBPassword
+		DATABASE: shadowsocks
+		ROOT_PASS: mypassword
